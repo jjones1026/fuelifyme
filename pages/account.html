@@ -4,21 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Account | Fuelify</title>
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header>
         <div class="logo">
-            <a href="../index.html"><img src="../assets/images/2025_01/logo.png" alt="Fuelify Logo"></a>
+            <a href="index.html"><img src="assets/images/2025_01/logo.png" alt="Fuelify Logo"></a>
         </div>
         <h1>Your Account</h1>
         <nav>
             <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../pages/services.html">Services</a></li>
-                <li><a href="../pages/about.html">About</a></li>
-                <li><a href="../pages/contact.html">Contact</a></li>
-                <li><a href="../pages/account.html" class="active" aria-current="page">About</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pages/services.html">Services</a></li>
+                <li><a href="pages/about.html">About</a></li>
+                <li><a href="pages/contact.html">Contact</a></li>
+                <li><a href="pages/account.html" class="active" aria-current="page">About</a></li>
             </ul>
         </nav>
     </header>
@@ -46,10 +46,14 @@
                 <label for="email">Email Address</label>
                 <input type="email" id="email" name="email" value="johndoe@example.com" required aria-required="true">
 
-                <label for="subscription">Subscription Plan</label>
+                <label for="subscription">Choose Your Plan</label>
                 <select id="subscription" name="subscription">
-                    <option value="basic" selected>Basic Plan ($19.95/month)</option>
-                    <option value="premium">Premium Plan ($39.95/month)</option>
+                    <option value="pay-go">Pay-As-You-Go ($24.95/month)</option>
+                    <option value="emergency">After-Hour Emergency Plan ($39.95/month)</option>
+                    <option value="basic" selected>>Basic Plan ($19.95/month)</option>
+                    <option value="plus">Plus Plan ($29.95/month)</option>
+                    <option value="additional">Additional Add-On Services ($12.95/delivery)</option>
+                    <option value="unlimited">Unlimited Plan ($49.95/month)</option>
                     <option value="enterprise">Enterprise Plan (Contact for Pricing)</option>
                 </select>
 

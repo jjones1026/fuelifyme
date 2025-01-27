@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account | Fuelify</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="../index.html"><img src="../assets/images/2025_01/logo.png" alt="Fuelify Logo"></a>
+        </div>
+        <h1>Your Account</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../pages/services.html">Services</a></li>
+                <li><a href="../pages/about.html">About</a></li>
+                <li><a href="../pages/contact.html">Contact</a></li>
+                <li><a href="../pages/account.html" class="active" aria-current="page">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <!-- Account Information Section -->
+        <section id="account-info" aria-labelledby="account-info-heading">
+            <h2 id="account-info-heading">Account Information</h2>
+            <p>Manage your account details and subscription plans below.</p>
+            <div class="account-details">
+                <p><strong>Name:</strong> John Doe</p>
+                <p><strong>Email:</strong> johndoe@example.com</p>
+                <p><strong>Subscription Plan:</strong> Basic Plan ($19.95/month)</p>
+                <p><strong>Status:</strong> Active</p>
+            </div>
+        </section>
+
+        <!-- Update Account Section -->
+        <section id="update-account" aria-labelledby="update-account-heading">
+            <h2 id="update-account-heading">Update Your Information</h2>
+            <form action="submit-account-changes" method="POST">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" value="John Doe" required aria-required="true">
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" value="johndoe@example.com" required aria-required="true">
+
+                <label for="subscription">Subscription Plan</label>
+                <select id="subscription" name="subscription">
+                    <option value="basic" selected>Basic Plan ($19.95/month)</option>
+                    <option value="premium">Premium Plan ($39.95/month)</option>
+                    <option value="enterprise">Enterprise Plan (Contact for Pricing)</option>
+                </select>
+
+                <button type="submit">Update Account</button>
+            </form>
+        </section>
+
+        <!-- Change Password Section -->
+        <section id="change-password" aria-labelledby="change-password-heading">
+            <h2 id="change-password-heading">Change Password</h2>
+            <form action="submit-password-change" method="POST">
+                <label for="current-password">Current Password</label>
+                <input 
+                    type="password" 
+                    id="current-password" 
+                    name="current-password" 
+                    required 
+                    aria-required="true" 
+                    placeholder="Enter current password">
+
+                <label for="new-password">New Password</label>
+                <input 
+                    type="password" 
+                    id="new-password" 
+                    name="new-password" 
+                    required 
+                    aria-required="true" 
+                    placeholder="At least 8 characters" 
+                    pattern=".{8,}" 
+                    title="Password must be at least 8 characters long">
+
+                <label for="confirm-password">Confirm New Password</label>
+                <input 
+                    type="password" 
+                    id="confirm-password" 
+                    name="confirm-password" 
+                    required 
+                    aria-required="true" 
+                    placeholder="Re-enter new password">
+
+                <button type="submit">Change Password</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Fuelify. All rights reserved. | <a href="../pages/privacy-policy.html">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>

@@ -40,3 +40,30 @@ forms.forEach(form => {
         }
     });
 });
+
+// Contact Form Submission
+const contactForm = document.querySelector('form');
+if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();  // Prevent default form submission
+
+        const formData = {
+            name: document.getElementById('name').value,
+            email: document.getElementById('email').value,
+            phone: document.getElementById('phone').value,
+            message: document.getElementById('message').value
+        };
+
+        // Send the form data to the server
+        fetch('http://localhost:3000/submit-contact-form', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData),
+        })
+        .then(response => response.text())
+        .then(data => alert(data))  // Alert the response from the server
+        .catch(error => alert('Error: ' + error));  // Catch and alert any errors
+    });
+}

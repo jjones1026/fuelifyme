@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us | Fuelify</title>
     <link rel="stylesheet" href="../css/styles.css">
+    <script src="../js/app.js" defer></script> <!-- Include app.js here -->
 </head>
 <body>
     <header>
@@ -18,7 +19,8 @@
                 <li><a href="../pages/services.html">Services</a></li>
                 <li><a href="../pages/about.html">About Us</a></li>
                 <li><a href="../pages/contact.html" class="active" aria-current="page">Contact</a></li>
-              </ul>
+                <li><a href="../pages/account.html">Account</a></li>
+            </ul>
         </nav>
     </header>
 
@@ -32,7 +34,8 @@
 
         <section id="contact-form">
             <h3>Send Us a Message</h3>
-            <form action="submit-contact-form" method="POST" aria-labelledby="contact-form-heading">
+            <!-- Form action is now handled by the JavaScript fetch request -->
+            <form id="contactForm">
                 <div class="form-group">
                     <label for="name">Your Name</label>
                     <input type="text" id="name" name="name" placeholder="Enter your name" required aria-required="true">
